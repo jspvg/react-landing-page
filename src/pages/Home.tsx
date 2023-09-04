@@ -1,11 +1,8 @@
 import Navigation from "../components/reusable/Navigation";
+import AppRoutes from "../routes/AppRoutes";
 
 const Home = () => {
-  return (
-    <>
-      <Navigation />
-    </>
-  );
+  return <>This is the home page</>;
 };
 
 export default Home;
