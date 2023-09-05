@@ -1,5 +1,5 @@
 const Careers = () => {
-  return <>This is the careers page</>;
+  return <div className="d-flex row m-3">This is the careers page</div>;
 };
 
 export default Careers;
