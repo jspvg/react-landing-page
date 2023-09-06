@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import logo from "../../assets/logo.svg";
 import "../../styles/navigation.scss";
+import GetStartedButton from "./GetStartedButton";
 
 const Navigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -21,7 +22,7 @@ const Navigation = () => {
 
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-md align-items-center">
+      <nav className="navbar navbar-expand-lg align-items-center">
         <div className="container-fluid row-gap-5">
           <a className="navbar-brand" href="/">
             <img src={logo} alt="manage logo" />
@@ -72,9 +73,7 @@ const Navigation = () => {
             aria-current="page"
             href="get-started"
           >
-            <button className="btn btn-red-orange text-white rounded-pill" type="submit">
-              Get Started
-            </button>
+            <GetStartedButton />
           </a>
         </div>
       </nav>
