@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
-import logo from "../../assets/logo.svg";
-import "../../styles/navigation.scss";
-import GetStartedButton from "./GetStartedButton";
+import { useState, useEffect } from 'react';
+import logo from '../../assets/logo.svg';
+import '../../styles/navigation.scss';
+import GetStartedButton from './GetStartedButton';
 
 const Navigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const handleNavCollapse = () => {
-    if(window.innerWidth >= 768) {
+    if (window.innerWidth >= 768) {
       setIsNavOpen(false);
     }
-  }
+  };
 
   useEffect(() => {
     window.addEventListener('resize', handleNavCollapse);
@@ -39,30 +39,55 @@ const Navigation = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className={`collapse navbar-collapse ${isNavOpen ? 'show mx-auto p-5 text-center bg-white shadow-lg' : ''}`} id="navbarSupportedContent">
+          <div
+            className={`collapse navbar-collapse ${
+              isNavOpen ? 'show mx-auto p-5 text-center bg-white shadow-lg' : ''
+            }`}
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
               <li className="nav-item">
-                <a className="nav-link fw-bold text-blue-dark" aria-current="page" href="/pricing">
+                <a
+                  className="nav-link fw-bold text-blue-dark"
+                  aria-current="page"
+                  href="/pricing"
+                >
                   Pricing
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold text-blue-dark" aria-current="page" href="/products">
+                <a
+                  className="nav-link fw-bold text-blue-dark"
+                  aria-current="page"
+                  href="/products"
+                >
                   Products
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold text-blue-dark" aria-current="page" href="/about-us">
+                <a
+                  className="nav-link fw-bold text-blue-dark"
+                  aria-current="page"
+                  href="/about-us"
+                >
                   About Us
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold text-blue-dark" aria-current="page" href="/careers">
+                <a
+                  className="nav-link fw-bold text-blue-dark"
+                  aria-current="page"
+                  href="/careers"
+                >
                   Careers
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold text-blue-dark" aria-current="page" href="/community">
+                <a
+                  className="nav-link fw-bold text-blue-dark"
+                  aria-current="page"
+                  href="/community"
+                >
                   Community
                 </a>
               </li>
