@@ -4,6 +4,7 @@ import '../../styles/home.scss';
 import { useEffect, useState } from 'react';
 
 const useScreenSize = () => {
+  const [isScreenXL, setIsScreenXL] = useState(false);
   const [isScreenLg, setIsScreenLg] = useState(false);
   const [isScreenMd, setIsScreenMd] = useState(false);
   const [isScreenSm, setIsScreenSm] = useState(false);
@@ -12,8 +13,9 @@ const useScreenSize = () => {
   const handleScreenChange = () => {
     const windowWidth = window.innerWidth;
 
-    setIsScreenLg(windowWidth >= 992);
-    setIsScreenMd(windowWidth >= 768 && windowWidth < 992)
+    setIsScreenXL(windowWidth >= 1200);
+    setIsScreenLg(windowWidth >= 992 && windowWidth < 1200);
+    setIsScreenMd(windowWidth >= 768 && windowWidth < 992);
     setIsScreenSm(windowWidth >= 576 && windowWidth < 768);
     setIsScreenMobile(windowWidth < 576);
   };
@@ -28,32 +30,48 @@ const useScreenSize = () => {
     };
   }, []);
 
-  return { isScreenLg, isScreenMd, isScreenSm, isScreenMobile };
-
+  return { isScreenXL, isScreenLg, isScreenMd, isScreenSm, isScreenMobile };
 };
 
 const Statistics = () => {
-  const { isScreenLg, isScreenMd, isScreenSm, isScreenMobile } = useScreenSize();
+  const { isScreenXL, isScreenLg, isScreenMd, isScreenSm, isScreenMobile } =
+    useScreenSize();
 
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
         <div
           className={`row col-lg order-2 order-lg-1 card m-md-5 m-lg-0 border-0 ${
-            isScreenLg ? 'w-50' : ( (isScreenMd || isScreenSm) ? 'w-75' : 'w-100' )
+            isScreenLg ? 'w-50' : isScreenMd || isScreenSm ? 'w-75' : 'w-100'
           } ${isScreenMobile ? 'my-1' : ''}`}
         >
-          <div className="card-body p-lg-5">
+          <div
+            className={`card-body p-lg-5 ${
+              (isScreenXL || isScreenLg) ? ' d-flex flex-column justify-content-center' : ''
+            }`}
+          >
             <h5
               className={`card-title fw-bold header-blue-dark ${
-                isScreenLg ? 'fs-lg-0' : ( isScreenMd ? 'fs-md-0 text-center' : 'fs-sm-0 text-center' )
+                isScreenXL
+                  ? 'fs-xl-0'
+                  : isScreenLg
+                  ? 'fs-lg-0'
+                  : isScreenMd
+                  ? 'fs-md-0 text-center'
+                  : 'fs-sm-0 text-center'
               }`}
             >
               Bring everyone together to build better products.
             </h5>
             <p
-              className={`card-text text-blue-gray ${
-                isScreenLg ? 'my-4 fs-lg-7 w-75' : ( isScreenMd ? 'text-center w-100' : 'fs-sm-6 text-center w-100' )
+              className={`card-text text-blue-gray w-100 ${
+                isScreenXL
+                  ? 'my-4 fs-xl-7'
+                  : isScreenLg
+                  ? 'my-4 fs-sm-6'
+                  : isScreenMd
+                  ? 'text-center'
+                  : 'fs-sm-6 text-center'
               }`}
               id="cardParagraph"
             >
@@ -61,7 +79,7 @@ const Statistics = () => {
               while keeping the larger team goals in view.
             </p>
             <div
-              className={`d-flex ${isScreenLg ? '' : 'justify-content-center'}`}
+              className={`d-flex ${(isScreenXL || isScreenLg) ? '' : 'justify-content-center'}`}
             >
               <a href="get-started">
                 <GetStartedButton />
@@ -71,12 +89,12 @@ const Statistics = () => {
         </div>
         <div
           className={`row col-lg order-1 order-lg-2 card m-md-5 m-lg-0 border-0 ${
-            isScreenLg ? 'w-50' : ( (isScreenMd || isScreenSm) ? 'w-75' : 'w-100' )
+            isScreenLg ? 'w-50' : isScreenMd || isScreenSm ? 'w-75' : 'w-100'
           } ${isScreenMobile ? 'my-1' : ''}`}
         >
           <div className="card-body">
             <img
-              className={` ${isScreenLg ? 'w-75' : 'w-100'} `}
+              className={`w-100 ${(isScreenXL || isScreenLg) ? 'h-100' : ''} `}
               src={illustration}
               alt="graphic illustration"
             />
