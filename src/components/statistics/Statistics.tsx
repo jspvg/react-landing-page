@@ -50,7 +50,7 @@ const Statistics = () => {
               (isScreenXL || isScreenLg) ? ' d-flex flex-column justify-content-center' : ''
             }`}
           >
-            <h5
+            <h1
               className={`card-title fw-bold header-blue-dark ${
                 isScreenXL
                   ? 'fs-xl-0'
@@ -62,16 +62,16 @@ const Statistics = () => {
               }`}
             >
               Bring everyone together to build better products.
-            </h5>
+            </h1>
             <p
-              className={`card-text text-blue-gray w-100 ${
+              className={`card-text text-blue-gray ${
                 isScreenXL
-                  ? 'my-4 fs-xl-7'
+                  ? 'my-4 fs-xl-7 w-75'
                   : isScreenLg
-                  ? 'my-4 fs-sm-6'
+                  ? 'my-4 fs-sm-6 w-100'
                   : isScreenMd
-                  ? 'text-center'
-                  : 'fs-sm-6 text-center'
+                  ? 'text-center w-100'
+                  : 'fs-sm-6 text-center w-100'
               }`}
               id="cardParagraph"
             >
