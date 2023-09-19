@@ -1,5 +1,6 @@
 import Functionality from '../components/functionality/Functionality';
 import Statistics from '../components/statistics/Statistics';
+import '../styles/home.scss';
 
 const Home = () => {
   return (

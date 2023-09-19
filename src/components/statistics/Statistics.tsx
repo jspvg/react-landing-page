@@ -1,6 +1,5 @@
 import GetStartedButton from '../reusable/GetStartedButton';
 import illustration from '../../assets/illustration-intro.svg';
-import '../../styles/home.scss';
 import { useEffect, useState } from 'react';
 
 const useScreenSize = () => {
@@ -47,7 +46,9 @@ const Statistics = () => {
         >
           <div
             className={`card-body p-lg-5 ${
-              (isScreenXL || isScreenLg) ? ' d-flex flex-column justify-content-center' : ''
+              isScreenXL || isScreenLg
+                ? ' d-flex flex-column justify-content-center'
+                : ''
             }`}
           >
             <h1
@@ -79,7 +80,9 @@ const Statistics = () => {
               while keeping the larger team goals in view.
             </p>
             <div
-              className={`d-flex ${(isScreenXL || isScreenLg) ? '' : 'justify-content-center'}`}
+              className={`d-flex ${
+                isScreenXL || isScreenLg ? '' : 'justify-content-center'
+              }`}
             >
               <a href="get-started">
                 <GetStartedButton />
@@ -94,7 +97,7 @@ const Statistics = () => {
         >
           <div className="card-body">
             <img
-              className={`w-100 ${(isScreenXL || isScreenLg) ? 'h-100' : ''} `}
+              className={`w-100 ${isScreenXL || isScreenLg ? 'h-100' : ''} `}
               src={illustration}
               alt="graphic illustration"
             />
