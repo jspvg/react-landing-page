@@ -42,7 +42,7 @@ const Statistics = () => {
                   ? 'my-4 fs-sm-6 w-100'
                   : isScreenMd
                   ? 'text-center w-100'
-                  : 'fs-sm-6 text-center w-100'
+                  : 'fs-sm-6 text-center px-5 w-100'
               }`}
               id="cardParagraph"
             >
