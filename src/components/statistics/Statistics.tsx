@@ -1,36 +1,6 @@
 import GetStartedButton from '../reusable/GetStartedButton';
 import illustration from '../../assets/illustration-intro.svg';
-import { useEffect, useState } from 'react';
-
-const useScreenSize = () => {
-  const [isScreenXL, setIsScreenXL] = useState(false);
-  const [isScreenLg, setIsScreenLg] = useState(false);
-  const [isScreenMd, setIsScreenMd] = useState(false);
-  const [isScreenSm, setIsScreenSm] = useState(false);
-  const [isScreenMobile, setIsScreenMobile] = useState(false);
-
-  const handleScreenChange = () => {
-    const windowWidth = window.innerWidth;
-
-    setIsScreenXL(windowWidth >= 1200);
-    setIsScreenLg(windowWidth >= 992 && windowWidth < 1200);
-    setIsScreenMd(windowWidth >= 768 && windowWidth < 992);
-    setIsScreenSm(windowWidth >= 576 && windowWidth < 768);
-    setIsScreenMobile(windowWidth < 576);
-  };
-
-  useEffect(() => {
-    handleScreenChange();
-
-    window.addEventListener('resize', handleScreenChange);
-
-    return () => {
-      window.removeEventListener('resize', handleScreenChange);
-    };
-  }, []);
-
-  return { isScreenXL, isScreenLg, isScreenMd, isScreenSm, isScreenMobile };
-};
+import { useScreenSize } from '../../hooks/useScreenSize';
 
 const Statistics = () => {
   const { isScreenXL, isScreenLg, isScreenMd, isScreenSm, isScreenMobile } =

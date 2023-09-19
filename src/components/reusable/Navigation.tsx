@@ -1,24 +1,10 @@
-import { useState, useEffect } from 'react';
 import logo from '../../assets/logo.svg';
 import '../../styles/navigation.scss';
 import GetStartedButton from './GetStartedButton';
+import { useNavCollapse } from '../../hooks/useNavCollapse';
 
 const Navigation = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-
-  const handleNavCollapse = () => {
-    if (window.innerWidth >= 768) {
-      setIsNavOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleNavCollapse);
-
-    return () => {
-      window.removeEventListener('rezise', handleNavCollapse);
-    };
-  }, []);
+  const { isNavOpen } = useNavCollapse();
 
   return (
     <div className="container">
