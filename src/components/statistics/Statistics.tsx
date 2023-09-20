@@ -37,7 +37,7 @@ const Statistics = () => {
             <p
               className={`card-text text-blue-gray ${
                 isScreenXL
-                  ? 'my-4 fs-xl-7 w-75'
+                  ? 'my-4 fs-xl-7 w-75 pe-4'
                   : isScreenLg
                   ? 'my-4 fs-sm-6 w-100'
                   : isScreenMd
