@@ -3,3 +3,10 @@ export type Feature = {
   title: string;
   description: string;
 };
+
+export type ReviewData = {
+  id: number;
+  image: string;
+  name: string;
+  review: string;
+};
