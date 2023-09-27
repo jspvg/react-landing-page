@@ -9,7 +9,7 @@ import GetStarted from "../pages/Get-Started";
 import Navigation from "../components/reusable/Navigation";
 
 const AppRoutes = () => (
-  <div className="d-flex row m-lg-4 px-lg-5">
+  <div className="d-flex row">
     <Navigation />
     <div>
       <Routes>
