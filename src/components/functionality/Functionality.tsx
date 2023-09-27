@@ -8,7 +8,7 @@ const Functionality = () => {
     useScreenSize();
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 mx-lg-4 px-lg-5">
       <div className="row justify-content-center">
         <div
           className={`row col-lg card border-0 ${

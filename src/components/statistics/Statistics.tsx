@@ -7,7 +7,7 @@ const Statistics = () => {
     useScreenSize();
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 mx-lg-4 px-lg-5">
       <div className="row justify-content-center">
         <div
           className={`row col-lg order-2 order-lg-1 card m-md-5 m-lg-0 border-0 ${
