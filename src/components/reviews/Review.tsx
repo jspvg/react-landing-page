@@ -6,11 +6,11 @@ interface ReviewProps {
 
 const Review: React.FC<ReviewProps> = ({ review }) => {
   return (
-    <div className="card col d-flex justify-content-center align-items-center mx-1 border-0">
-      <div className="card-body text-center p-4 bg-gray-lighter">
+    <div className="card col d-flex justify-content-center align-items-center mx-lg-1 border-0">
+      <div className="card-body m-2 m-lg-0 text-center p-4 bg-gray-lighter">
         <img
           src={review.image}
-          className='user-img mb-4'
+          className="user-img mb-4"
           alt={`${review.name}'s image`}
         />
         <h1 className="fw-bold header-blue-dark text-center fs-sm-6">
