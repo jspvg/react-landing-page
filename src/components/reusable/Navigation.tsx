@@ -1,10 +1,26 @@
+import { useState, useEffect } from 'react';
+import GetStartedButton from './GetStartedButton';
+import { useScreenSize } from '../../hooks/useScreenSize';
 import logo from '../../assets/logo.svg';
 import '../../styles/navigation.scss';
-import GetStartedButton from './GetStartedButton';
-import { useNavCollapse } from '../../hooks/useNavCollapse';
 
 const Navigation = () => {
-  const { isNavOpen } = useNavCollapse();
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
+  const { isScreenXL, isScreenLg, isScreenMd } = useScreenSize();
+
+  useEffect(() => {
+    const handleNavCollapse = () => {
+      if (isScreenMd || isScreenLg || isScreenXL) {
+        setIsNavOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleNavCollapse);
+
+    return () => {
+      window.removeEventListener('resize', handleNavCollapse);
+    };
+  }, [isScreenMd, isScreenLg, isScreenXL]);
 
   return (
     <div className="d-flex m-lg-4 px-lg-5">
