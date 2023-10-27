@@ -5,7 +5,7 @@
 }
 
 .header-blue-lighter {
-  color: $blue-lighter!important;
+  color: $blue-lighter !important;
 }
 
 .text-blue-gray {
@@ -48,10 +48,14 @@
   border-radius: 20px 0 0 20px;
 }
 
-.bg-gray-lighter{
+.bg-gray-lighter {
   background-color: $gray-lighter;
 }
 
 .user-img {
   width: 5rem;
+}
+
+.footer-orange {
+  background-color: $red-orange;
 }

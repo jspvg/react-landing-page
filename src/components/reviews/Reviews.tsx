@@ -25,7 +25,7 @@ const Reviews: React.FC<ReviewsProps> = ({ reviews }) => {
         ))}
         <div className="d-flex justify-content-center mt-5">
           <a href="get-started">
-            <GetStartedButton />
+            <GetStartedButton color="orange" />
           </a>
         </div>
       </div>

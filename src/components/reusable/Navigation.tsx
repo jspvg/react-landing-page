@@ -103,7 +103,7 @@ const Navigation = () => {
               aria-current="page"
               href="get-started"
             >
-              <GetStartedButton />
+              <GetStartedButton color="orange" />
             </a>
           </div>
         </nav>
