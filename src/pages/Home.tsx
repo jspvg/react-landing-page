@@ -1,8 +1,10 @@
 import Functionality from '../components/functionality/Functionality';
+import Footer from '../components/reusable/Footer';
 import FooterCTA from '../components/reusable/FooterCTA';
 import Reviews from '../components/reviews/Reviews';
 import Statistics from '../components/statistics/Statistics';
 import { reviews } from '../data/reviews';
+import { links } from '../data/links';
 import '../styles/home.scss';
 
 const Home = () => {
@@ -15,6 +17,7 @@ const Home = () => {
       </div>
       <div className="d-flex row">
         <FooterCTA />
+        <Footer links={links}/>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 import { useScreenSize } from '../../hooks/useScreenSize';
-import GetStartedButton from './GetStartedButton';
+import Button from './Button';
 
 const FooterCTA = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -24,7 +24,7 @@ const FooterCTA = () => {
         } align-items-center`}
       >
         <a href="get-started">
-          <GetStartedButton color="white" />
+          <Button color="white" text="Get Started" />
         </a>
       </div>
     </div>

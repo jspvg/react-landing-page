@@ -59,3 +59,19 @@
 .footer-orange {
   background-color: $red-orange;
 }
+
+.footer-blue-darkest {
+  background-color: $blue-darkest;
+}
+
+.text-white {
+  color: white;
+
+  &:hover {
+    color: $red-orange !important;
+  }
+}
+
+.form-height {
+  height: 2.5rem;
+}

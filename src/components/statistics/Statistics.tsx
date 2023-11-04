@@ -1,4 +1,4 @@
-import GetStartedButton from '../reusable/GetStartedButton';
+import GetStartedButton from '../reusable/Button';
 import illustration from '../../assets/illustration-intro.svg';
 import { useScreenSize } from '../../hooks/useScreenSize';
 
