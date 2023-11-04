@@ -5,7 +5,7 @@
 }
 
 .header-blue-lighter {
-  color: $blue-lighter!important;
+  color: $blue-lighter !important;
 }
 
 .text-blue-gray {
@@ -48,10 +48,30 @@
   border-radius: 20px 0 0 20px;
 }
 
-.bg-gray-lighter{
+.bg-gray-lighter {
   background-color: $gray-lighter;
 }
 
 .user-img {
   width: 5rem;
+}
+
+.footer-orange {
+  background-color: $red-orange;
+}
+
+.footer-blue-darkest {
+  background-color: $blue-darkest;
+}
+
+.text-white {
+  color: white;
+
+  &:hover {
+    color: $red-orange !important;
+  }
+}
+
+.form-height {
+  height: 2.5rem;
 }

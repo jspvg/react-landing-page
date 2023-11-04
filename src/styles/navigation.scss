@@ -7,17 +7,29 @@
 }
 
 .text-blue-dark {
-  color: $blue-dark!important;
+  color: $blue-dark !important;
 
   &:hover {
-    color: $gray-light!important;
+    color: $gray-light !important;
   }
 }
 
 .btn-red-orange {
-  background-color: $red-orange!important;
+  background-color: $red-orange !important;
 
   &:hover {
     background-color: $red-light !important;
+  }
+}
+
+.btn-white {
+  background-color: white !important;
+}
+
+.text-red-orange {
+  color: $red-orange !important;
+
+  &:hover {
+    color: $red-light !important;
   }
 }

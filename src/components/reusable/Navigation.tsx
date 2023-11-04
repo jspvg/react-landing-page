@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import GetStartedButton from './GetStartedButton';
+import Button from './Button';
 import { useScreenSize } from '../../hooks/useScreenSize';
 import logo from '../../assets/logo.svg';
 import '../../styles/navigation.scss';
@@ -103,7 +103,7 @@ const Navigation = () => {
               aria-current="page"
               href="get-started"
             >
-              <GetStartedButton />
+              <Button color="orange" text="Get Started" />
             </a>
           </div>
         </nav>

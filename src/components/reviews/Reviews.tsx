@@ -1,5 +1,6 @@
 import { useScreenSize } from '../../hooks/useScreenSize';
-import GetStartedButton from '../reusable/GetStartedButton';
+import { ReviewData } from '../../lib/types';
+import Button from '../reusable/Button';
 import Review from './Review';
 
 interface ReviewsProps {
@@ -25,7 +26,7 @@ const Reviews: React.FC<ReviewsProps> = ({ reviews }) => {
         ))}
         <div className="d-flex justify-content-center mt-5">
           <a href="get-started">
-            <GetStartedButton />
+            <Button color="orange" text="Get Started" />
           </a>
         </div>
       </div>
